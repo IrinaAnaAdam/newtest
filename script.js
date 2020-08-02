@@ -24,3 +24,5 @@ console.log(arr[2]);
 
 
 console.log(arr[4]);
+
+console.log(arr[5]);
