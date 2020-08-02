@@ -20,4 +20,7 @@ var sum = arr.reduce(function(a, b)
 //change 1
 
 console.log(arr[2]);
+//frkfjhudhvb
 
+
+console.log(arr[4]);
