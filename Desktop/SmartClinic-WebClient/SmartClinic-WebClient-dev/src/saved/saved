@@ -1,0 +1,130 @@
+import React from 'react'
+import { logout } from '../../actions'
+import { useDispatch } from 'react-redux'
+import { history } from '../../utils'
+
+import { Grid, Card } from "@material-ui/core";
+import { withStyles } from "@material-ui/styles";
+
+import './topbar.scss';
+import './container.scss';
+import './login.scss';
+import NavBar from '../navbar/NavBar';
+
+function Container() {
+
+    const dispatch = useDispatch()
+
+    function handleLogout() {
+        dispatch(logout)
+    }
+    return(
+        <div>
+        <div class="flex-grow flex-column relative overflow-hidden h-full-screen jss7655 jss7657">
+            <div class="jss7691">
+                <div class="topbar-hold fixed">
+                    <div class="flex justify-between items-center h-full">
+                         <div class="flex">  {/*navigation bar este deasupra -> FIX THIS*/}
+                            <button class="MuiButtonBase-root-4488 MuiIconButton-root-4480 hide-on-pc" tabindex="0" type="button">
+                                <span class="MuiIconButton-label-4487">
+                                    <span class="material-icons MuiIcon-root-4489" aria-hidden="true">menu</span>
+                                </span>
+                                <span class="MuiTouchRipple-root-4498">
+                                </span>
+                            </button>
+                            <div class="hide-on-mobile">
+                                <button class="MuiButtonBase-root-4488 MuiIconButton-root-4480" tabindex="0" type="button">
+                                    <span class="MuiIconButton-label-4487">
+                                        <span class="material-icons MuiIcon-root-4489" aria-hidden="true">mail_outline</span>
+                                    </span>
+                                    <span class="MuiTouchRipple-root-4498"></span>
+                                </button>
+                                <button class="MuiButtonBase-root-4488 MuiIconButton-root-4480" tabindex="0" type="button">
+                                    <span class="MuiIconButton-label-4487">
+                                        <span class="material-icons MuiIcon-root-4489" aria-hidden="true">web_asset</span>
+                                    </span>
+                                    <span class="MuiTouchRipple-root-4498"></span>
+                                </button>
+                                <button class="MuiButtonBase-root-4488 MuiIconButton-root-4480" tabindex="0" type="button">
+                                    <span class="MuiIconButton-label-4487">
+                                        <span class="material-icons MuiIcon-root-4489" aria-hidden="true">star_outline</span>
+                                    </span>
+                                    <span class="MuiTouchRipple-root-4498"></span>
+                                </button>
+                            </div>
+                            </div>
+                            <div class="flex items-center">
+                                <button class="MuiButtonBase-root-4488 MuiIconButton-root-4480" tabindex="0" type="button">
+                                    <span class="MuiIconButton-label-4487">
+                                        <span class="material-icons MuiIcon-root-4489" aria-hidden="true">search</span>
+                                    </span>
+                                    <span class="MuiTouchRipple-root-4498"></span>
+                                </button>
+
+                                <button class="MuiButtonBase-root-4998 MuiIconButton-root-4990" tabindex="0" type="button" >
+                                    <span class="MuiIconButton-label-4997">
+                                        <span class="MuiBadge-root-4999">
+                                            <span class="material-icons MuiIcon-root-5014" aria-hidden="true">notifications</span>
+                                            <span class="MuiBadge-badge-5000 MuiBadge-anchorOriginTopRightRectangle-5005 MuiBadge-colorSecondary-5002">5</span>
+                                        </span>
+                                    </span>
+                                    <span class="MuiTouchRipple-root-5023"></span>
+                                </button>
+                                
+                                <button class="MuiButtonBase-root-5084 MuiIconButton-root-5076" tabindex="0" type="button" >
+                                    <span class="MuiIconButton-label-5083">
+                                        <span class="MuiBadge-root-5085">
+                                            <span class="material-icons MuiIcon-root-5100" aria-hidden="true">shopping_cart</span>
+                                            <span class="MuiBadge-badge-5086 MuiBadge-anchorOriginTopRightRectangle-5091 MuiBadge-colorSecondary-5088">1</span>
+                                        </span>
+                                    </span>
+                                    <span class="MuiTouchRipple-root-5109"></span>
+                                </button>
+                                <div class="inline-block">
+                                    <div class="MuiAvatar-root-4684 MuiAvatar-circle-4686 cursor-pointer mx-2">
+                                        <img src="/assets/images/face-6.jpg" class="MuiAvatar-img-2307"></img>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="scrollbar-container flex-grow flex-column relative h-full ps ps--active-y">
+                <div class="relative flex-grow">
+                    <div class="pb-24 pt-7 px-8 bg-primary">
+                        <img src="/src/assets/images/doctor-getty-crop.jpg" class="doc"></img>
+                    </div>
+                </div>
+                {/*Log in aici*/}
+                <div class="MuiPaper-root MuiCard-root jss6382 MuiPaper-elevation1 MuiPaper-rounded">
+                <div class="MuiGrid-root MuiGrid-container">
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-5 MuiGrid-grid-lg-5">
+                        <div class="p-8 flex justify-center items-center h-full">
+                            <img class="w-200" src="/src/assets/images/login-gov-600x314.png" ></img>
+                        </div>
+                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 MuiGrid-grid-md-7 MuiGrid-grid-lg-7">
+                            <div class="p-8 h-full bg-light-gray relative">
+                                <form>
+                                    <div>
+                                        
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+
+
+            
+
+        </div>
+        </div>
+    )
+}
+
+
+export default Container
